@@ -246,10 +246,10 @@ nav ul li:hover::after {
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
-  gap: 2em;
+  gap: 4em;
 }
 .item {
-  width: 25%;
+  width: 23%;
   height: 80vh;
   position: relative;
   display: flex;
@@ -257,12 +257,21 @@ nav ul li:hover::after {
   justify-content: center;
   flex-direction: column;
 }
-.item figure {
+.photo{
   width: 100%;
   height: 80%;
+  position: relative;
+}
+.photo figure {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
   border-radius: 35px;
+  overflow: hidden;
+}
+.photo img{
+  transition: .4s;
 }
 .info-abs {
   position: absolute;
@@ -295,12 +304,15 @@ nav ul li:hover::after {
     font-family: var(--italic-font);
   }
 }
-.item figure:hover .info-abs {
+.photo:hover .info-abs {
   opacity: 1;
 }
-.item figure:hover .info-into {
+.photo:hover .info-into {
   transform: translateY(0);
   opacity: 1;
+}
+.photo:hover figure img {
+  transform: scale(1.15);
 }
 .price {
   width: 100%;
